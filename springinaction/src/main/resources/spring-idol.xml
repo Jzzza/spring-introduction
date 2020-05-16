@@ -10,4 +10,6 @@
     <bean id="sonnet29" class="com.springinaction.springidol.Sonnet29"/>
     <bean id="theStage" class="com.springinaction.springidol.Stage" factory-method="getInstance"/>
     <bean id="ticket" class="com.springinaction.springidol.Ticket" scope="prototype"/>
+    <bean id="auditorium" class="com.springinaction.springidol.Auditorium" init-method="turnOnLights"
+          destroy-method="turnOfflights"/>
 </beans>
