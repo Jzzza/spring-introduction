@@ -8,4 +8,5 @@
         <constructor-arg ref="sonnet29"/>
     </bean>
     <bean id="sonnet29" class="com.springinaction.springidol.Sonnet29"/>
+    <bean id="theStage" class="com.springinaction.springidol.Stage" factory-method="getInstance"/>
 </beans>
