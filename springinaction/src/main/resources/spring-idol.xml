@@ -14,6 +14,7 @@
     <bean id="ticket" class="com.springinaction.springidol.Ticket" scope="prototype"/>
     <bean id="auditorium" class="com.springinaction.springidol.Auditorium" init-method="turnOnLights"
           destroy-method="turnOffLights"/>
+    <bean id="saxophone" class="com.springinaction.springidol.Saxophone"/>
     <bean id="kenny" class="com.springinaction.springidol.Insturmentalist">
         <property name="song" value="Jingle Bells"/>
         <property name="age" value="37"/>
