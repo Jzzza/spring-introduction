@@ -9,7 +9,7 @@ public class Insturmentalist implements Perfromer {
     }
 
     public void perform() throws PerformerException {
-        System.out.println("Playing " + song + " : ");
+        System.out.print("Playing " + song + " : ");
         instrument.play();
     }
 
