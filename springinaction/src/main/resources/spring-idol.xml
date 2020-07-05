@@ -18,5 +18,6 @@
     <bean id="kenny" class="com.springinaction.springidol.Insturmentalist">
         <property name="song" value="Jingle Bells"/>
         <property name="age" value="37"/>
+        <property name="instrument" ref="saxophone"/>
     </bean>
 </beans>
