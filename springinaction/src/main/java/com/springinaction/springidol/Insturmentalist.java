@@ -10,6 +10,7 @@ public class Insturmentalist implements Perfromer {
 
     public void perform() throws PerformerException {
         System.out.println("Playing " + song + " : ");
+        instrument.play();
     }
 
     public void setSong(String song) {
