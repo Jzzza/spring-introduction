@@ -11,6 +11,10 @@ public class Insturmentalist implements Perfromer {
         System.out.println("Playing " + song + " : ");
     }
 
+    public void setSong(String song) {
+        this.song = song;
+    }
+
     public String getSong() {
         return song;
     }
