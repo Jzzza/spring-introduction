@@ -3,6 +3,7 @@ package com.springinaction.springidol;
 public class Insturmentalist implements Perfromer {
     private String song;
     private Instrument instrument;
+    private Integer age;
 
     public Insturmentalist() {
     }
@@ -25,5 +26,13 @@ public class Insturmentalist implements Perfromer {
 
     public void setInstrument(Instrument instrument) {
         this.instrument = instrument;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
     }
 }

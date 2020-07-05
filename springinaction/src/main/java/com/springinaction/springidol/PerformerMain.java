@@ -7,7 +7,9 @@ public class PerformerMain {
     public static void main(String[] args) throws PerformerException {
         ApplicationContext ctx =
                 new ClassPathXmlApplicationContext("spring-idol.xml");
-        Perfromer perfromer = (Perfromer) ctx.getBean("poeticDuke");
+//        Perfromer perfromer = (Perfromer) ctx.getBean("poeticDuke");
+//        perfromer.perform();
+        Perfromer perfromer = (Perfromer) ctx.getBean("kenny");
         perfromer.perform();
     }
 }

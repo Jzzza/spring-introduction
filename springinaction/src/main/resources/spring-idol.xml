@@ -16,5 +16,6 @@
           destroy-method="turnOffLights"/>
     <bean id="kenny" class="com.springinaction.springidol.Insturmentalist">
         <property name="song" value="Jingle Bells"/>
+        <property name="age" value="37"/>
     </bean>
 </beans>
