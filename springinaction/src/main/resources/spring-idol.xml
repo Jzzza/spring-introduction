@@ -36,6 +36,11 @@
                 <ref bean="cymbal"/>
                 <ref bean="harmonica"/>
             </list>
+            <!--<set>
+                <ref bean="guitar"/>
+                <ref bean="cymbal"/>
+                <ref bean="harmonica"/>
+            </set>-->
         </property>
     </bean>
 </beans>
