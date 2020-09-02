@@ -36,11 +36,16 @@
                 <ref bean="cymbal"/>
                 <ref bean="harmonica"/>
             </list>-->
-            <set>
-                <ref bean="guitar"/>
-                <ref bean="cymbal"/>
-                <ref bean="harmonica"/>
-            </set>
+            <!--            <set>
+                            <ref bean="guitar"/>
+                            <ref bean="cymbal"/>
+                            <ref bean="harmonica"/>
+                        </set>-->
+            <map>
+                <entry key="GUITAR" value-ref="guitar" />
+                <entry key="CYMBAL" value-ref="cymbal" />
+                <entry key="HARMONICA" value-ref="harmonica" />
+            </map>
         </property>
     </bean>
 </beans>
