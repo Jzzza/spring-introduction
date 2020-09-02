@@ -6,13 +6,13 @@
         http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
        default-init-method="turnOnLights"
        default-destroy-method="turnOffLights">
-<!--    <bean id="poeticDuke" class="com.springinaction.springidol.Insturmentalist">-->
-<!--        <constructor-arg value="15"/>-->
-<!--        <constructor-arg ref="sonnet29"/>-->
-<!--        <constructor-arg>-->
-<!--            <bean class="com.springinaction.springidol.PoeticJuggler" />-->
-<!--        </constructor-arg>-->
-<!--    </bean>-->
+    <!--    <bean id="poeticDuke" class="com.springinaction.springidol.Insturmentalist">-->
+    <!--        <constructor-arg value="15"/>-->
+    <!--        <constructor-arg ref="sonnet29"/>-->
+    <!--        <constructor-arg>-->
+    <!--            <bean class="com.springinaction.springidol.PoeticJuggler" />-->
+    <!--        </constructor-arg>-->
+    <!--    </bean>-->
     <bean id="sonnet29" class="com.springinaction.springidol.Sonnet29"/>
     <bean id="theStage" class="com.springinaction.springidol.Stage" factory-method="getInstance"/>
     <bean id="ticket" class="com.springinaction.springidol.Ticket" scope="prototype"/>
@@ -28,5 +28,14 @@
         <!--        <property name="instrument">
                     <bean class="com.springinaction.springidol.Piano"/>
                 </property>-->
+    </bean>
+    <bean id="hank" class="com.springinaction.springidol.OneManBand">
+        <property name="instruments">
+            <list>
+                <ref bean="guitar"/>
+                <ref bean="cymbal"/>
+                <ref bean="harmonica"/>
+            </list>
+        </property>
     </bean>
 </beans>
