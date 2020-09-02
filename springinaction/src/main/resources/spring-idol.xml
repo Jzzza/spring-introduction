@@ -51,6 +51,7 @@
 <!--                <prop key="CYMBAL">CRASH CRASH CRASH</prop>-->
 <!--                <prop key="HARMONICA">HUM HUM HUM</prop>-->
 <!--            </props>-->
+            <null/>
         </property>
     </bean>
 </beans>
