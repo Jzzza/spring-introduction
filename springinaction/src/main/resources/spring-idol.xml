@@ -54,4 +54,7 @@
             <null/>
         </property>
     </bean>
+    <bean id="carl" class="com.springinaction.springidol.Insturmentalist">
+        <property name="song" value="#{kenny.song}" />
+    </bean>
 </beans>
