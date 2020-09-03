@@ -11,5 +11,8 @@ public class PerformerMain {
 //        perfromer.perform();
         Perfromer perfromer = (Perfromer) ctx.getBean("kenny");
         perfromer.perform();
+
+/*        Insturmentalist carl = (Insturmentalist)ctx.getBean("carl");
+        System.out.println(carl.getSong());*/
     }
 }
