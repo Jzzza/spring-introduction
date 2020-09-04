@@ -57,4 +57,8 @@
     <bean id="carl" class="com.springinaction.springidol.Insturmentalist">
         <property name="song" value="#{kenny.song}" />
     </bean>
+    <bean id="david" class="com.springinaction.springidol.Insturmentalist">
+        <property name="song" value="Jingle Bells" />
+        <property name="intrument" ref="saxophone" />
+    </bean>
 </beans>
