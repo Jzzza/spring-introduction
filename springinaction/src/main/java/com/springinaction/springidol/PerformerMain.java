@@ -13,6 +13,8 @@ public class PerformerMain {
         perfromer.perform();
         perfromer = (Perfromer) ctx.getBean("david");
         perfromer.perform();
+        perfromer = (Perfromer) ctx.getBean("frank");
+        perfromer.perform();
 
 /*        Insturmentalist carl = (Insturmentalist)ctx.getBean("carl");
         System.out.println(carl.getSong());*/
