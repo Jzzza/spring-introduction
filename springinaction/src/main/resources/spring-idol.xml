@@ -29,36 +29,40 @@
                     <bean class="com.springinaction.springidol.Piano"/>
                 </property>-->
     </bean>
-<!--    <bean id="hank" class="com.springinaction.springidol.OneManBand">
-        <property name="instruments">
-            &lt;!&ndash;<list>
-                <ref bean="guitar"/>
-                <ref bean="cymbal"/>
-                <ref bean="harmonica"/>
-            </list>&ndash;&gt;
-            &lt;!&ndash;            <set>
-                            <ref bean="guitar"/>
-                            <ref bean="cymbal"/>
-                            <ref bean="harmonica"/>
-                        </set>&ndash;&gt;
-            <map>
-                <entry key="GUITAR" value-ref="guitar" />
-                <entry key="CYMBAL" value-ref="cymbal" />
-                <entry key="HARMONICA" value-ref="harmonica" />
-            </map>
-&lt;!&ndash;            <props>&ndash;&gt;
-&lt;!&ndash;                <prop key="GUITAR">STRUM STRUM STRUM</prop>&ndash;&gt;
-&lt;!&ndash;                <prop key="CYMBAL">CRASH CRASH CRASH</prop>&ndash;&gt;
-&lt;!&ndash;                <prop key="HARMONICA">HUM HUM HUM</prop>&ndash;&gt;
-&lt;!&ndash;            </props>&ndash;&gt;
-            <null/>
-        </property>
-    </bean>-->
+    <!--    <bean id="hank" class="com.springinaction.springidol.OneManBand">
+            <property name="instruments">
+                &lt;!&ndash;<list>
+                    <ref bean="guitar"/>
+                    <ref bean="cymbal"/>
+                    <ref bean="harmonica"/>
+                </list>&ndash;&gt;
+                &lt;!&ndash;            <set>
+                                <ref bean="guitar"/>
+                                <ref bean="cymbal"/>
+                                <ref bean="harmonica"/>
+                            </set>&ndash;&gt;
+                <map>
+                    <entry key="GUITAR" value-ref="guitar" />
+                    <entry key="CYMBAL" value-ref="cymbal" />
+                    <entry key="HARMONICA" value-ref="harmonica" />
+                </map>
+    &lt;!&ndash;            <props>&ndash;&gt;
+    &lt;!&ndash;                <prop key="GUITAR">STRUM STRUM STRUM</prop>&ndash;&gt;
+    &lt;!&ndash;                <prop key="CYMBAL">CRASH CRASH CRASH</prop>&ndash;&gt;
+    &lt;!&ndash;                <prop key="HARMONICA">HUM HUM HUM</prop>&ndash;&gt;
+    &lt;!&ndash;            </props>&ndash;&gt;
+                <null/>
+            </property>
+        </bean>-->
     <bean id="carl" class="com.springinaction.springidol.Insturmentalist">
-        <property name="song" value="#{kenny.song}" />
+        <property name="song" value="#{kenny.song}"/>
     </bean>
     <bean id="david" class="com.springinaction.springidol.Insturmentalist">
+        <property name="song" value="Jingle Bells"/>
+        <property name="intrument" ref="saxophone"/>
+    </bean>
+    <bean id="baseSaxophonist" class="com.springinaction.springidol.Insturmentalist" abstract="true">
+        <property name="instrument" ref="saxophone" />
         <property name="song" value="Jingle Bells" />
-        <property name="intrument" ref="saxophone" />
     </bean>
 </beans>
