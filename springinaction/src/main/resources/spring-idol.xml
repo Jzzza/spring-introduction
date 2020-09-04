@@ -65,6 +65,10 @@
         <property name="song" value="Jingle Bells" />
     </bean>
 
+    <bean id="basePerformer" abstract="true">
+        <property name="song" value="Somewgere Over the Rainbow"></property>
+    </bean>
+
     <bean id="taylor" class="com.springinaction.springidol.Insturmentalist">
         <property name="song" value="Somewgere Over the Rainbow"></property>
     </bean>
