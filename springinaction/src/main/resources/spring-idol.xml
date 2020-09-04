@@ -64,4 +64,13 @@
         <property name="instrument" ref="saxophone" />
         <property name="song" value="Jingle Bells" />
     </bean>
+
+    <bean id="taylor" class="com.springinaction.springidol.Insturmentalist">
+        <property name="song" value="Somewgere Over the Rainbow"></property>
+    </bean>
+
+    <bean id="stevie" class="com.springinaction.springidol.Insturmentalist">
+        <property name="instrument" ref="guitar"/>
+        <property name="song" value="Somewhere Over the Rainbow"/>
+    </bean>
 </beans>
