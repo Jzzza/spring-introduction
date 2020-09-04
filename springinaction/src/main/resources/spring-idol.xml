@@ -69,12 +69,10 @@
         <property name="song" value="Somewgere Over the Rainbow"></property>
     </bean>
 
-    <bean id="taylor" class="com.springinaction.springidol.Insturmentalist">
-        <property name="song" value="Somewgere Over the Rainbow"></property>
+    <bean id="taylor" class="com.springinaction.springidol.Insturmentalist" parent="basePerformer">
     </bean>
 
-    <bean id="stevie" class="com.springinaction.springidol.Insturmentalist">
+    <bean id="stevie" class="com.springinaction.springidol.Insturmentalist" parent="basePerformer">
         <property name="instrument" ref="guitar"/>
-        <property name="song" value="Somewhere Over the Rainbow"/>
     </bean>
 </beans>
