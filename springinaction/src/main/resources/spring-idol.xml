@@ -87,5 +87,5 @@
             replacer="tigerReplacer"/>
     </bean>
 
-    <bean id="tigerReplacer" class="com.springinaction.springidol.TigerRepalcer" />
+    <bean id="tigerReplacer" class="com.springinaction.springidol.TigerReplacer" />
 </beans>
