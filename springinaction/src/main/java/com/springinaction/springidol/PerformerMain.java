@@ -5,6 +5,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class PerformerMain {
     public static void main(String[] args) throws PerformerException {
+        // Загрузка контекста (в нашем случае, загрузка контекста spring-idol.xml)
         ApplicationContext ctx =
                 new ClassPathXmlApplicationContext("spring-idol.xml");
 //        Perfromer perfromer = (Perfromer) ctx.getBean("poeticDuke");
@@ -18,5 +19,8 @@ public class PerformerMain {
 
 /*        Insturmentalist carl = (Insturmentalist)ctx.getBean("carl");
         System.out.println(carl.getSong());*/
+
+        Perfromer magician = (Perfromer) ctx.getBean("harry");
+        magician.perform();
     }
 }

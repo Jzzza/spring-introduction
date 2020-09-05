@@ -73,7 +73,7 @@
     </bean>
 
     <bean id="stevie" class="com.springinaction.springidol.Insturmentalist" parent="basePerformer">
-        <property name="instrument" ref="guitar"/>
+<!--        <property name="instrument" ref="guitar"/>-->
     </bean>
 
     <bean id="harry" class="com.springinaction.springidol.Magician">

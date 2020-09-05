@@ -1,6 +1,6 @@
 package com.springinaction.springidol;
 
-public class Magician {
+public class Magician implements Perfromer {
     private String magicWords;
 
     private MagicBox magicBox;
