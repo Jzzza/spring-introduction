@@ -19,14 +19,14 @@
           destroy-method="turnOffLights"/>
     <bean id="saxophone" class="com.springinaction.springidol.Saxophone"/>
     <bean id="piano" class="com.springinaction.springidol.Piano"/>
-<!--    <bean id="kenny" parent="baseSaxophonist">
-        &lt;!&ndash;<property name="song" value="Jingle Bells"/>&ndash;&gt;
+    <bean id="kenny" parent="baseSaxophonist">
+        <!--<property name="song" value="Jingle Bells"/>-->
         <property name="age" value="37"/>
-        &lt;!&ndash;<property name="instrument" ref="piano"/>&ndash;&gt;
-        &lt;!&ndash;        <property name="instrument">
+        <!--<property name="instrument" ref="piano"/>-->
+        <!--        <property name="instrument">
                     <bean class="com.springinaction.springidol.Piano"/>
-                </property>&ndash;&gt;
-    </bean>-->
+                </property>-->
+    </bean>
     <!--    <bean id="hank" class="com.springinaction.springidol.OneManBand">
             <property name="instruments">
                 &lt;!&ndash;<list>
@@ -52,14 +52,14 @@
                 <null/>
             </property>
         </bean>-->
-<!--    <bean id="carl" class="com.springinaction.springidol.Insturmentalist">
+    <bean id="carl" class="com.springinaction.springidol.Insturmentalist">
         <property name="song" value="#{kenny.song}"/>
     </bean>
     <bean id="david" parent="baseSaxophonist">
     </bean>
     <bean id="frank" parent="baseSaxophonist">
         <property name="song" value="Mary had a little lamb"/>
-    </bean>-->
+    </bean>
     <bean id="baseSaxophonist" class="com.springinaction.springidol.Insturmentalist" abstract="true">
         <property name="instrument" ref="saxophone"/>
         <property name="song" value="Jingle Bells"/>
@@ -69,21 +69,21 @@
         <property name="song" value="Somewgere Over the Rainbow"></property>
     </bean>
 
-<!--    <bean id="taylor" class="com.springinaction.springidol.Insturmentalist" parent="basePerformer">
-    </bean>-->
+    <bean id="taylor" class="com.springinaction.springidol.Insturmentalist" parent="basePerformer">
+    </bean>
 
-    <bean id="stevie" class="com.springinaction.springidol.Insturmentalist" parent="basePerformer">
+<!--    <bean id="stevie" class="com.springinaction.springidol.Insturmentalist" parent="basePerformer">
         <lookup-method name="getInstrument" bean="guitar" />
         <property name="song" value="Greensleeves" />
-    </bean>
+    </bean>-->
 
     <!--I dont have class for guitar because i use saxophone-->
     <bean id="guitar" class="com.springinaction.springidol.Saxophone" scope="prototype"/>
 
-<!--    <bean id="harry" class="com.springinaction.springidol.Magician">
+    <bean id="harry" class="com.springinaction.springidol.Magician">
         <property name="magicBox" ref="magicBox"/>
         <property name="magicWords" value="Bippity boppity boo"/>
-    </bean>-->
+    </bean>
 
     <bean id="magicBox" class="com.springinaction.springidol.MagicBoxImpl">
         <replaced-method

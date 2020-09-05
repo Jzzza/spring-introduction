@@ -1,6 +1,7 @@
 package com.springinaction.springidol;
 
-public abstract class Insturmentalist implements Perfromer {
+//public abstract class Insturmentalist implements Perfromer {
+public class Insturmentalist implements Perfromer {
     private String song;
     private Instrument instrument;
     private Integer age;
@@ -8,11 +9,12 @@ public abstract class Insturmentalist implements Perfromer {
     public Insturmentalist() {
     }
 
-    public abstract Instrument getInstrument();
+//    public abstract Instrument getInstrument();
 
     public void perform() throws PerformerException {
         System.out.print("Playing " + song + " : ");
-        getInstrument().play();
+//        getInstrument().play();
+        instrument.play();
     }
 
     public void setSong(String song) {
