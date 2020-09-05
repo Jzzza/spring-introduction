@@ -10,17 +10,17 @@ public class PerformerMain {
                 new ClassPathXmlApplicationContext("spring-idol.xml");
 //        Perfromer perfromer = (Perfromer) ctx.getBean("poeticDuke");
 //        perfromer.perform();
-        Perfromer perfromer = (Perfromer) ctx.getBean("kenny");
+/*        Perfromer perfromer = (Perfromer) ctx.getBean("kenny");
         perfromer.perform();
         perfromer = (Perfromer) ctx.getBean("david");
         perfromer.perform();
         perfromer = (Perfromer) ctx.getBean("frank");
-        perfromer.perform();
+        perfromer.perform();*/
 
 /*        Insturmentalist carl = (Insturmentalist)ctx.getBean("carl");
         System.out.println(carl.getSong());*/
 
-        Perfromer magician = (Perfromer) ctx.getBean("harry");
+        Perfromer magician = (Perfromer) ctx.getBean("stevie");
         magician.perform();
     }
 }
