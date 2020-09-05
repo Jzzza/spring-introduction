@@ -77,6 +77,9 @@
         <property name="song" value="Greensleeves" />
     </bean>
 
+    <!--I dont have class for guitar because i use saxophone-->
+    <bean id="guitar" class="com.springinaction.springidol.Saxophone" scope="prototype"/>
+
     <bean id="harry" class="com.springinaction.springidol.Magician">
         <property name="magicBox" ref="magicBox"/>
         <property name="magicWords" value="Bippity boppity boo"/>
