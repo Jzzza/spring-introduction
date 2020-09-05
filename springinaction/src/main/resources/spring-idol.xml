@@ -75,4 +75,11 @@
     <bean id="stevie" class="com.springinaction.springidol.Insturmentalist" parent="basePerformer">
         <property name="instrument" ref="guitar"/>
     </bean>
+
+    <bean id="harry" class="com.springinaction.springidol.Magician">
+        <property name="magicBox" ref="magicBox" />
+        <property name="magicWords" value="Bippity boppity boo" />
+    </bean>
+
+    <bean id="magicBox" class="com.springinaction.springidol.MagicBoxImpl" />
 </beans>
