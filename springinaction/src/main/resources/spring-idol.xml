@@ -73,7 +73,8 @@
     </bean>
 
     <bean id="stevie" class="com.springinaction.springidol.Insturmentalist" parent="basePerformer">
-        <!--        <property name="instrument" ref="guitar"/>-->
+        <lookup-method name="getInstrument" bean="guitar" />
+        <property name="song" value="Greensleeves" />
     </bean>
 
     <bean id="harry" class="com.springinaction.springidol.Magician">
@@ -88,4 +89,6 @@
     </bean>
 
     <bean id="tigerReplacer" class="com.springinaction.springidol.TigerReplacer" />
+
+
 </beans>
