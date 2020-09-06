@@ -93,7 +93,7 @@
 
     <bean id="tigerReplacer" class="com.springinaction.springidol.TigerReplacer" />
 
-    <bean id="pianist" class="com.springinaction.springidol.Insturmentalist">
+    <bean id="pianist" class="com.springinaction.springidol.Insturmentalist" abstract="true">
         <property name="song" value="Chopsticks" />
         <property name="instrument">
             <bean class="com.springinaction.springidol.Piano" />
