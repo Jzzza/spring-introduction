@@ -12,5 +12,13 @@
     <bean id="contact" class="com.springinaction.chapter3.propeditor.Contact">
         <property name="phoneNumber" ref="infoPhone"/>
     </bean>
-
+    <bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+        <property name="customEditors">
+            <map>
+                <entry key="com.springinaction.chapter3.propeditor.PhoneEditor">
+                    <bean id="phoneEditor" class="com.springinaction.chapter3.propeditor.PhoneEditor"/>
+                </entry>
+            </map>
+        </property>
+    </bean>
 </beans>
