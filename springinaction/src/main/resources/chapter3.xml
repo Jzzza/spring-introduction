@@ -21,4 +21,7 @@
             </map>
         </property>
     </bean>
+    <bean id="contactWithEditor" class="com.springinaction.chapter3.propeditor.Contact">
+        <property name="phoneNumber" value="888-555-1212"/>
+    </bean>
 </beans>
