@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+>
+    <bean id="infoPhone" class="com.springinaction.chapter3.propeditor.PhoneNumber">
+        <constructor-arg value="888"/>
+        <constructor-arg value="555"/>
+        <constructor-arg value="1212"/>
+    </bean>
+    <bean id="contact" class="com.springinaction.chapter3.propeditor.Contact">
+        <property name="phoneNumber" ref="infoPhone"/>
+    </bean>
+
+</beans>
