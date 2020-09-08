@@ -16,6 +16,12 @@
         <property name="password" value="password" />
     </bean>-->
     <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-        <property name="location" value="jdbc.properties" />
+        <property name="locations">
+            <list>
+                <value>jdbc.properties</value>
+                <value>security.properties</value>
+                <value>application.properties</value>
+            </list>
+        </property>
     </bean>
 </beans>
