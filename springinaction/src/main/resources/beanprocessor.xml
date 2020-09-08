@@ -9,12 +9,12 @@
     <bean id="bugs" class="com.springinaction.chapter3.postprocessor.Rabbit">
         <property name="description" value="That rascally rabbit!"/>
     </bean>
-<!--    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-        <property name="url" value="jdbc:hsqldb:Training" />
-        <property name="driverClassName" value="org.hsqldb.jdbcDriver" />
-        <property name="username" value="appUser" />
-        <property name="password" value="password" />
-    </bean>-->
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="url" value="${database.url}" />
+        <property name="driverClassName" value="${database.driver}" />
+        <property name="username" value="${database.name}" />
+        <property name="password" value="${database.password}" />
+    </bean>
     <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="locations">
             <list>
