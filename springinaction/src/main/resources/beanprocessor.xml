@@ -15,4 +15,7 @@
         <property name="username" value="appUser" />
         <property name="password" value="password" />
     </bean>-->
+    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="location" value="jdbc.properties" />
+    </bean>
 </beans>
