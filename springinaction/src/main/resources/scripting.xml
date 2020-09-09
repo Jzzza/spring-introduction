@@ -6,9 +6,10 @@
         http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
         http://www.springframework.org/schema/lang
         http://www.springframework.org/schema/lang/spring-lang-2.0.xsd">
-    <lang:jruby id="lime"
+    <!--<lang:jruby id="lime"
                 script-source="classpath:com/>springinaction/scripting/Lime.rb"
-                script-interfaces="com.springinaction.scripting.Lime"/>
+                script-interfaces="com.springinaction.scripting.Lime"/>-->
+    <lang:groovy id="lime" script-source="classpath:com/springinaction/scripting/Lime.groovy" />
     <bean id="coconut" class="com.springinaction.scripting.Coconut">
         <property name="lime" ref="lime"/>
     </bean>
