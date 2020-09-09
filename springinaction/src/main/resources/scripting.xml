@@ -20,4 +20,12 @@
     <lang:groovy id="coconutGroovy" script-source="classpath:com/springinaction/scripting/Coconut.groovy" refresh-check-delay="5000">
         <lang:property name="lime" ref="lime" />
     </lang:groovy>
+    <lang:bsh id="limeInline" script-interfaces="com.springinaction.scripting.Lime">
+        <lang:inline-script><![CDATE[
+            void drink(){
+                System.out.println("Called the doctor woke him up!");
+            }
+            ]]>
+        </lang:inline-script>
+    </lang:bsh>
 </beans>
