@@ -16,5 +16,5 @@
     <bean id="coconut" class="com.springinaction.scripting.Coconut">
         <property name="lime" ref="lime"/>
     </bean>
-
+    <bean id="lime" class="com.springinaction.scripting.impl.LimeImpl" />
 </beans>
