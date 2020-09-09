@@ -17,4 +17,7 @@
         <property name="lime" ref="lime"/>
     </bean>
     <bean id="lime" class="com.springinaction.scripting.impl.LimeImpl" />
+    <lang:groovy id="coconutGroovy" script-source="classpath:com/springinaction/scripting/Coconut.groovy">
+        <lang:property name="lime" ref="lime" />
+    </lang:groovy>
 </beans>
