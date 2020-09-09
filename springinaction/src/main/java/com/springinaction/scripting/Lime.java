@@ -1,5 +1,5 @@
 package com.springinaction.scripting;
 
-interface Lime {
+public interface Lime {
     void drink();
 }
