@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
 
 import javax.inject.Inject;
+import javax.inject.Named;
 
 //public abstract class Insturmentalist implements Perfromer {
 @Configurable("pianist")
@@ -15,6 +16,7 @@ public class Insturmentalist implements Perfromer {
     @Inject
     @StringedInstrument
     @Strummed
+    @Named("guitar")
     private Instrument instrument;
     private Integer age;
 
