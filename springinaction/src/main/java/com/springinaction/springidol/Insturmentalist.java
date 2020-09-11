@@ -5,12 +5,14 @@ import com.springinaction.springidol.qualifiers.Strummed;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
 
+import javax.inject.Inject;
+
 //public abstract class Insturmentalist implements Perfromer {
 @Configurable("pianist")
 public class Insturmentalist implements Perfromer {
     private String song;
 
-    @Autowired(required = false)
+    @Inject
     @StringedInstrument
     @Strummed
     private Instrument instrument;
