@@ -12,7 +12,7 @@ import javax.inject.Named;
 //public abstract class Insturmentalist implements Perfromer {
 @Configurable("pianist")
 public class Insturmentalist implements Perfromer {
-    @Value("Eruption")
+    @Value("#{systemProperties.myFavoriteSong}")
     private String song;
 
     @Inject
