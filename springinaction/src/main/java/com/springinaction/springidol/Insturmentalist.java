@@ -5,12 +5,14 @@ import com.springinaction.springidol.qualifiers.Strummed;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
 import javax.inject.Inject;
 import javax.inject.Named;
 
 //public abstract class Insturmentalist implements Perfromer {
 @Configurable("pianist")
+@Component("eddie")
 public class Insturmentalist implements Perfromer {
     @Value("#{systemProperties.myFavoriteSong}")
     private String song;
