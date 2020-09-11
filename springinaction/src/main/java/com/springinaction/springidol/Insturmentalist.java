@@ -13,7 +13,12 @@ public class Insturmentalist implements Perfromer {
     public Insturmentalist() {
     }
 
-//    public abstract Instrument getInstrument();
+    @Autowired
+    public Insturmentalist(Instrument instrument) {
+        this.instrument = instrument;
+    }
+
+    //    public abstract Instrument getInstrument();
 
     public void perform() throws PerformerException {
         System.out.print("Playing " + song + " : ");
