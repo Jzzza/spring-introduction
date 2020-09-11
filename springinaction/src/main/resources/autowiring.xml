@@ -9,6 +9,9 @@
        default-autowire="byType"
 >
     <bean id="duke" class="com.springinaction.springidol.PoeticJuggler" autowire="autodetect"/>
+    <bean class="com.springinaction.springidol.Guitar">
+        <qualifier value="stringed"/>
+    </bean>
 
     <!--  Включение поддержки автоматического связывания по аннотациям  -->
     <context:annotation-config/>
