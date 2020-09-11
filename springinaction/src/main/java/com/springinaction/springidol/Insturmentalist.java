@@ -1,6 +1,7 @@
 package com.springinaction.springidol;
 
 import com.springinaction.springidol.qualifiers.StringedInstrument;
+import com.springinaction.springidol.qualifiers.Strummed;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
 
@@ -11,6 +12,7 @@ public class Insturmentalist implements Perfromer {
 
     @Autowired(required = false)
     @StringedInstrument
+    @Strummed
     private Instrument instrument;
     private Integer age;
 
