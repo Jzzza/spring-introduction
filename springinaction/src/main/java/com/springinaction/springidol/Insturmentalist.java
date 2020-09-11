@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Configurable;
 @Configurable("pianist")
 public class Insturmentalist implements Perfromer {
     private String song;
+
+    @Autowired
     private Instrument instrument;
     private Integer age;
 
