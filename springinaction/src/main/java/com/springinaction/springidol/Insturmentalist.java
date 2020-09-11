@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Configurable;
 public class Insturmentalist implements Perfromer {
     private String song;
 
-    @Autowired
+    @Autowired(required = false)
     private Instrument instrument;
     private Integer age;
 
