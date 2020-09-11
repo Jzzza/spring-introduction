@@ -1,8 +1,8 @@
 package com.springinaction.springidol;
 
+import com.springinaction.springidol.qualifiers.StringedInstrument;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
-import org.springframework.beans.factory.annotation.Qualifier;
 
 //public abstract class Insturmentalist implements Perfromer {
 @Configurable("pianist")
@@ -10,7 +10,7 @@ public class Insturmentalist implements Perfromer {
     private String song;
 
     @Autowired(required = false)
-    @Qualifier("guitar")
+    @StringedInstrument
     private Instrument instrument;
     private Integer age;
 
