@@ -4,6 +4,7 @@ import com.springinaction.springidol.qualifiers.StringedInstrument;
 import com.springinaction.springidol.qualifiers.Strummed;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
+import org.springframework.beans.factory.annotation.Value;
 
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -11,6 +12,7 @@ import javax.inject.Named;
 //public abstract class Insturmentalist implements Perfromer {
 @Configurable("pianist")
 public class Insturmentalist implements Perfromer {
+    @Value("Eruption")
     private String song;
 
     @Inject
