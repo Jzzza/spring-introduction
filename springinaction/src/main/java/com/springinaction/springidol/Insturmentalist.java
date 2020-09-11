@@ -1,5 +1,6 @@
 package com.springinaction.springidol;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
 
 //public abstract class Insturmentalist implements Perfromer {
@@ -32,6 +33,7 @@ public class Insturmentalist implements Perfromer {
         return song;
     }
 
+    @Autowired
     public void setInstrument(Instrument instrument) {
         this.instrument = instrument;
     }
