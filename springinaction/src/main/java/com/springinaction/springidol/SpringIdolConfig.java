@@ -11,4 +11,9 @@ public class SpringIdolConfig {
     public Perfromer duke(){
         return new Juggler();
     }
+
+    @Bean
+    public Perfromer duke15(){
+        return new Juggler(15);
+    }
 }
