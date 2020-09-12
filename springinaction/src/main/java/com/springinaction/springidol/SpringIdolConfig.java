@@ -16,4 +16,11 @@ public class SpringIdolConfig {
     public Perfromer duke15(){
         return new Juggler(15);
     }
+
+    @Bean
+    public Perfromer kenny(){
+        Insturmentalist kenny = new Insturmentalist();
+        kenny.setSong("Jingle Bells");
+        return kenny;
+    }
 }
