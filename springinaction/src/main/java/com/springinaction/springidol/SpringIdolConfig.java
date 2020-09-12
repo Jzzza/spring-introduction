@@ -23,4 +23,14 @@ public class SpringIdolConfig {
         kenny.setSong("Jingle Bells");
         return kenny;
     }
+
+    @Bean
+    private Poem sonnet29(){
+        return new Sonnet29();
+    }
+
+    @Bean
+    private Perfromer poeticDuke(){
+        return new PoeticJuggler(sonnet29());
+    }
 }
