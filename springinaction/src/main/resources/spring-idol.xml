@@ -1,10 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
        xmlns="http://www.springframework.org/schema/beans"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
        default-init-method="turnOnLights"
        default-destroy-method="turnOffLights">
+    <bean id="audience" class="com.springinaction.springidol.Audience"/>
+    <aop:config>
+        <aop:aspect ref="audience">
+            <aop:before method="takeSeats"
+                        pointcut="execution(* com.springinaction.springidol.Perfromer.perform(..))"/>
+            <aop:before method="turnOffCellPhones"
+                        pointcut="execution(* com.springinaction.springidol.Perfromer.perform(..))"/>
+            <aop:after-returning method="applaud"
+                        pointcut="execution(* com.springinaction.springidol.Perfromer.perform(..))"/>
+            <aop:after-throwing method="demandRefund"
+                        pointcut="execution(* com.springinaction.springidol.Perfromer.perform(..))"/>
+        </aop:aspect>
+    </aop:config>
     <!--    <bean id="poeticDuke" class="com.springinaction.springidol.Insturmentalist">-->
     <!--        <constructor-arg value="15"/>-->
     <!--        <constructor-arg ref="sonnet29"/>-->
@@ -72,10 +86,10 @@
     <bean id="taylor" class="com.springinaction.springidol.Insturmentalist" parent="basePerformer">
     </bean>
 
-<!--    <bean id="stevie" class="com.springinaction.springidol.Insturmentalist" parent="basePerformer">
-        <lookup-method name="getInstrument" bean="guitar" />
-        <property name="song" value="Greensleeves" />
-    </bean>-->
+    <!--    <bean id="stevie" class="com.springinaction.springidol.Insturmentalist" parent="basePerformer">
+            <lookup-method name="getInstrument" bean="guitar" />
+            <property name="song" value="Greensleeves" />
+        </bean>-->
 
     <!--I dont have class for guitar because i use saxophone-->
     <bean id="guitar" class="com.springinaction.springidol.Saxophone" scope="prototype"/>
@@ -87,18 +101,18 @@
 
     <bean id="magicBox" class="com.springinaction.springidol.MagicBoxImpl">
         <replaced-method
-            name="getContents"
-            replacer="tigerReplacer"/>
+                name="getContents"
+                replacer="tigerReplacer"/>
     </bean>
 
-    <bean id="tigerReplacer" class="com.springinaction.springidol.TigerReplacer" />
+    <bean id="tigerReplacer" class="com.springinaction.springidol.TigerReplacer"/>
     <!--Нужно куда-то добавить спринг конфигуред
         <aop:spring-configured>
     -->
     <bean id="pianist" class="com.springinaction.springidol.Insturmentalist" abstract="true">
-        <property name="song" value="Chopsticks" />
+        <property name="song" value="Chopsticks"/>
         <property name="instrument">
-            <bean class="com.springinaction.springidol.Piano" />
+            <bean class="com.springinaction.springidol.Piano"/>
         </property>
     </bean>
 </beans>
