@@ -20,13 +20,22 @@
                         pointcut-ref="performance"/>
             <!-- Ссылка на именованный срез -->
             <aop:after-returning method="applaud"
-                        pointcut-ref="performance"/>
+                                 pointcut-ref="performance"/>
             <!-- Ссылка на именованный срез -->
             <aop:after-throwing method="demandRefund"
-                        pointcut-ref="performance"/>
+                                pointcut-ref="performance"/>
             <!-- Совет выполняемый и до, и после -->
             <aop:around pointcut-ref="performance"
                         method="watchPerformance()"/>
+        </aop:aspect>
+        <aop:aspect ref="magician">
+            <aop:pointcut id="thinking" expression="execution(*
+                 com.springinaction.springidol.Thinker.thinkOfSomething(String))
+                      and args(thoughts)"/>
+            <aop:before
+                 pointcut-ref="thinking"
+                 method="interceptThoughts"
+                 arg-names="thoughts"/>
         </aop:aspect>
     </aop:config>
     <!--    <bean id="poeticDuke" class="com.springinaction.springidol.Insturmentalist">-->
