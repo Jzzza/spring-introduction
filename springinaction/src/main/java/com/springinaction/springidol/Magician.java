@@ -1,9 +1,9 @@
 package com.springinaction.springidol;
 
-public class Magician implements Perfromer {
+public class Magician implements Perfromer, MindReader {
     private String magicWords;
-
     private MagicBox magicBox;
+    private String thoughts;
     public Magician(){}
 
     public void perform() throws PerformerException{
@@ -18,5 +18,14 @@ public class Magician implements Perfromer {
 
     public void setMagicBox(MagicBox magicBox) {
         this.magicBox = magicBox;
+    }
+
+    public void interceptThoughts(String thoughts) {
+        System.out.println("Intercepting volunteer's thoughts");
+        this.thoughts = thoughts;
+    }
+
+    public String getThroughts() {
+        return thoughts;
     }
 }
