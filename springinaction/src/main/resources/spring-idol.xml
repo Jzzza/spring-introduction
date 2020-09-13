@@ -24,6 +24,9 @@
             <!-- Ссылка на именованный срез -->
             <aop:after-throwing method="demandRefund"
                         pointcut-ref="performance"/>
+            <!-- Совет выполняемый и до, и после -->
+            <aop:around pointcut-ref="performance"
+                        method="watchPerformance()"/>
         </aop:aspect>
     </aop:config>
     <!--    <bean id="poeticDuke" class="com.springinaction.springidol.Insturmentalist">-->
