@@ -9,14 +9,21 @@
     <bean id="audience" class="com.springinaction.springidol.Audience"/>
     <aop:config>
         <aop:aspect ref="audience">
+            <!-- Определение среза для множества точек -->
+            <aop:pointcut id="performance"
+                          expression="execution(* com.springinaction.springidol.Perfromer.perform(..))"/>
+            <!-- Ссылка на именованный срез -->
             <aop:before method="takeSeats"
-                        pointcut="execution(* com.springinaction.springidol.Perfromer.perform(..))"/>
+                        pointcut-ref="performance"/>
+            <!-- Ссылка на именованный срез -->
             <aop:before method="turnOffCellPhones"
-                        pointcut="execution(* com.springinaction.springidol.Perfromer.perform(..))"/>
+                        pointcut-ref="performance"/>
+            <!-- Ссылка на именованный срез -->
             <aop:after-returning method="applaud"
-                        pointcut="execution(* com.springinaction.springidol.Perfromer.perform(..))"/>
+                        pointcut-ref="performance"/>
+            <!-- Ссылка на именованный срез -->
             <aop:after-throwing method="demandRefund"
-                        pointcut="execution(* com.springinaction.springidol.Perfromer.perform(..))"/>
+                        pointcut-ref="performance"/>
         </aop:aspect>
     </aop:config>
     <!--    <bean id="poeticDuke" class="com.springinaction.springidol.Insturmentalist">-->
