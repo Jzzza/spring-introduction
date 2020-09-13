@@ -37,6 +37,11 @@
                  method="interceptThoughts"
                  arg-names="thoughts"/>
         </aop:aspect>
+        <aop:aspect>
+            <aop:declare-parents types-matching="com.springinaction.springidol.Perfromer+"
+                 implement-interface="com.springinaction.springidol.Contestant"
+                 default-impl="com.springinaction.springidol.GraciousContestan"/>
+        </aop:aspect>
     </aop:config>
     <!--    <bean id="poeticDuke" class="com.springinaction.springidol.Insturmentalist">-->
     <!--        <constructor-arg value="15"/>-->
