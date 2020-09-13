@@ -7,6 +7,7 @@
        default-init-method="turnOnLights"
        default-destroy-method="turnOffLights">
     <bean id="audience" class="com.springinaction.springidol.Audience"/>
+    <bean id="contestantDelegate" class="com.springinaction.springidol.GraciousContestant"
     <aop:config>
         <aop:aspect ref="audience">
             <!-- Определение среза для множества точек -->
@@ -40,7 +41,8 @@
         <aop:aspect>
             <aop:declare-parents types-matching="com.springinaction.springidol.Perfromer+"
                  implement-interface="com.springinaction.springidol.Contestant"
-                 default-impl="com.springinaction.springidol.GraciousContestan"/>
+                 delegate-ref="contestantDelegate"/>
+<!--                 default-impl="com.springinaction.springidol.GraciousContestan"/>-->
         </aop:aspect>
     </aop:config>
     <!--    <bean id="poeticDuke" class="com.springinaction.springidol.Insturmentalist">-->
