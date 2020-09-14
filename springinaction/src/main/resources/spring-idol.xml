@@ -1,50 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:aop="http://www.springframework.org/schema/aop"
        xmlns="http://www.springframework.org/schema/beans"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
        default-init-method="turnOnLights"
        default-destroy-method="turnOffLights">
+    <!-- Audience содежит собственное определение множества точек сопряжения   -->
     <bean id="audience" class="com.springinaction.springidol.Audience"/>
     <bean id="contestantDelegate" class="com.springinaction.springidol.GraciousContestant"
-    <aop:config>
-        <aop:aspect ref="audience">
-            <!-- Определение среза для множества точек -->
-            <aop:pointcut id="performance"
-                          expression="execution(* com.springinaction.springidol.Perfromer.perform(..))"/>
-            <!-- Ссылка на именованный срез -->
-            <aop:before method="takeSeats"
-                        pointcut-ref="performance"/>
-            <!-- Ссылка на именованный срез -->
-            <aop:before method="turnOffCellPhones"
-                        pointcut-ref="performance"/>
-            <!-- Ссылка на именованный срез -->
-            <aop:after-returning method="applaud"
-                                 pointcut-ref="performance"/>
-            <!-- Ссылка на именованный срез -->
-            <aop:after-throwing method="demandRefund"
-                                pointcut-ref="performance"/>
-            <!-- Совет выполняемый и до, и после -->
-            <aop:around pointcut-ref="performance"
-                        method="watchPerformance()"/>
-        </aop:aspect>
-        <aop:aspect ref="magician">
-            <aop:pointcut id="thinking" expression="execution(*
-                 com.springinaction.springidol.Thinker.thinkOfSomething(String))
-                      and args(thoughts)"/>
-            <aop:before
-                 pointcut-ref="thinking"
-                 method="interceptThoughts"
-                 arg-names="thoughts"/>
-        </aop:aspect>
-        <aop:aspect>
-            <aop:declare-parents types-matching="com.springinaction.springidol.Perfromer+"
-                 implement-interface="com.springinaction.springidol.Contestant"
-                 delegate-ref="contestantDelegate"/>
-<!--                 default-impl="com.springinaction.springidol.GraciousContestan"/>-->
-        </aop:aspect>
-    </aop:config>
     <!--    <bean id="poeticDuke" class="com.springinaction.springidol.Insturmentalist">-->
     <!--        <constructor-arg value="15"/>-->
     <!--        <constructor-arg ref="sonnet29"/>-->
