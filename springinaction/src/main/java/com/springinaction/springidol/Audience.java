@@ -32,13 +32,14 @@ public class Audience {
         System.out.println("Boo! We want our money back!");
     }
 
+    @Around("performance()") // Совет выполняемый и до, и после вызова целевого метода
     public void watchPerformance(ProceedingJoinPoint joinPoint) {
         try {
             takeSeats();
             turnOffCellPhones();
             long start = System.currentTimeMillis(); // Перед выступлением
 
-            joinPoint.proceed();
+            joinPoint.proceed();  // Запуск выполнения целевого метода
 
             long end = System.currentTimeMillis();
             applaud();
