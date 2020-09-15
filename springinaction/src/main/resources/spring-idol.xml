@@ -13,6 +13,7 @@
     <aop:aspectj-autoproxy/>
     <!-- Audience содежит собственное определение множества точек сопряжения   -->
     <bean id="audience" class="com.springinaction.springidol.Audience"/>
+    <bean class="com.springinaction.springidol.ContestantIntroducer" />
     <bean id="contestantDelegate" class="com.springinaction.springidol.GraciousContestant"
     <!--    <bean id="poeticDuke" class="com.springinaction.springidol.Insturmentalist">-->
     <!--        <constructor-arg value="15"/>-->
