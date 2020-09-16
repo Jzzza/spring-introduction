@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:jee="http://www.springframework.org/schema/jee"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/jee"
 >
-    <jee:jndi-lookup id="dataSource" jndi-name="/jdbs/SpitterDS" resource-ref="true"/>
+    <!--    <jee:jndi-lookup id="dataSource" jndi-name="/jdbs/SpitterDS" resource-ref="true"/>-->
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+        <!-- Драйвер JDBC -->
+        <property name="driverClassName" value="org.hsqldb.jdbcDriver"/>
+        <!-- JDBC URL Базы данных -->
+        <property name="url" value="jdbs:hsqldb://localhost/spitter/spitter"/>
+        <property name="username" value="sa"/>
+        <property name="password" value=""/>
+        <!-- Начальное число соединений при создании -->
+        <property name="initialSize" value="5"/>
+        <!-- Максимально допустимое число открытых соединений -->
+        <property name="maxActive" value="10"/>
+    </bean>
 </beans>
