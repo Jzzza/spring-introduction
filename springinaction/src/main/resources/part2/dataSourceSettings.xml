@@ -33,4 +33,8 @@
         <constructor-arg ref="dataSource"/>
     </bean>
 
+    <bean id="spitterDao">
+        <property name="jdbcTemplate" ref="jdbcTemplate"/>
+    </bean>
+
 </beans>
