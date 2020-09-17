@@ -5,6 +5,8 @@ import org.springframework.jdbc.core.simple.SimpleJdbcTemplate;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.Map;
 
 public class JdbcSpitterDAO implements SpitterDAO{
     private static final String SQL_INSERT_SPITTER = "insert into spitter (username, password, fullname) " +
@@ -17,12 +19,17 @@ public class JdbcSpitterDAO implements SpitterDAO{
     }
 
     public void addSpiiter(Spitter spitter) {
-        jdbcTemplate.update(SQL_INSERT_SPITTER,
-                spitter.getUsername(),
-                spitter.getPassword(),
-                spitter.getFullName(),
-                spitter.isUpdatedByEmail());
-        spitter.isUpdatedByEmail();
+        Map<String, Object> params = new HashMap<String, Object>();
+        params.put("username", spitter.getUsername());
+        params.put("password", spitter.getPassword());
+        params.put("fullname", spitter.getFullName());
+
+        jdbcTemplate.update(SQL_INSERT_SPITTER, params);
+        spitter.setId(queryForIdentity());
+    }
+
+    private long queryForIdentity() {
+        return 0;
     }
 
     public Spitter getSpitterById(long id) {
