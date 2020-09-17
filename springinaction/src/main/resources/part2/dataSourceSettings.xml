@@ -8,18 +8,18 @@
     <!--    <jee:jndi-lookup id="dataSource" jndi-name="/jdbs/SpitterDS" resource-ref="true"/>-->
 
     <!-- Connections Pool -->
-    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
-        <!-- Драйвер JDBC -->
-        <property name="driverClassName" value="org.hsqldb.jdbcDriver"/>
-        <!-- JDBC URL Базы данных -->
-        <property name="url" value="jdbs:hsqldb://localhost/spitter/spitter"/>
-        <property name="username" value="sa"/>
-        <property name="password" value=""/>
-        <!-- Начальное число соединений при создании -->
-        <property name="initialSize" value="5"/>
-        <!-- Максимально допустимое число открытых соединений -->
-        <property name="maxActive" value="10"/>
-    </bean>
+<!--    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">-->
+<!--        &lt;!&ndash; Драйвер JDBC &ndash;&gt;-->
+<!--        <property name="driverClassName" value="org.hsqldb.jdbcDriver"/>-->
+<!--        &lt;!&ndash; JDBC URL Базы данных &ndash;&gt;-->
+<!--        <property name="url" value="jdbs:hsqldb://localhost/spitter/spitter"/>-->
+<!--        <property name="username" value="sa"/>-->
+<!--        <property name="password" value=""/>-->
+<!--        &lt;!&ndash; Начальное число соединений при создании &ndash;&gt;-->
+<!--        <property name="initialSize" value="5"/>-->
+<!--        &lt;!&ndash; Максимально допустимое число открытых соединений &ndash;&gt;-->
+<!--        <property name="maxActive" value="10"/>-->
+<!--    </bean>-->
 
     <!-- JDBC -->
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
