@@ -33,7 +33,7 @@
         <constructor-arg ref="dataSource"/>
     </bean>
 
-    <bean id="spitterDao">
+    <bean id="spitterDao" class="org.springframework.jdbc.core.simple.SimpleJdbcDaoSupport">
         <property name="jdbcTemplate" ref="jdbcTemplate"/>
     </bean>
 
