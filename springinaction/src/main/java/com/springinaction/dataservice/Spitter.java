@@ -1,6 +1,14 @@
 package com.springinaction.dataservice;
 
 public class Spitter {
+    private long id;
+    private String username;
+    private String password;
+    private String fullName;
+    private String email;
+    private boolean updatedByEmail;
+
+
     public String getUsername() {
         return username;
     }
@@ -32,13 +40,15 @@ public class Spitter {
     public boolean isUpdatedByEmail() {
         return updatedByEmail;
     }
-
     public void setEmail(String email) {
         this.email = email;
     }
-    private String username;
-    private String password;
-    private String fullName;
-    private String email;
-    private boolean updatedByEmail;
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public long getId() {
+        return id;
+    }
 }
