@@ -7,7 +7,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class JdbcSpitterDAO implements SpitterDAO{
-    private static final String SQL_INSERT_SPITTER = "update";
+    private static final String SQL_INSERT_SPITTER = "insert into spitter (username, password, fullname) " +
+            "values (:username, :password, :fullname)";
     private static final String SQL_SELECT_SPITTER_BY_ID = "select";
     private SimpleJdbcTemplate jdbcTemplate;
 
