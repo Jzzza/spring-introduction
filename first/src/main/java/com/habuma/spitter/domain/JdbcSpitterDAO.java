@@ -1,4 +1,4 @@
-package com.springinaction.dataservice;
+package com.habuma.spitter.domain;
 
 import org.springframework.jdbc.core.simple.ParameterizedRowMapper;
 import org.springframework.jdbc.core.simple.SimpleJdbcDaoSupport;

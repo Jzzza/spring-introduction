@@ -1,4 +1,4 @@
-package com.springinaction.dataservice;
+package com.habuma.spitter.domain;
 
 public class Spitter {
     private long id;
