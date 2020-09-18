@@ -49,5 +49,11 @@
                 <prop key="dialect">org.hibernate.dialect.HSQLDialect</prop>
             </props>
         </property>
+        <property name="annotatedClasses">
+            <list>
+                <value>com.habuma.spitter.domain.Spitter</value>
+                <value>com.habuma.spitter.domain.Spittle</value>
+            </list>
+        </property>
     </bean>
 </beans>
