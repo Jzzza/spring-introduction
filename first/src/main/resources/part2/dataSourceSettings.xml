@@ -7,6 +7,9 @@
         http://www.springframework.org/schema/jee"
 >
     <context:component-scan base-package="com.habuma.spitter.persistence"/>
+
+    <!-- Перехватчик всех специфичных исключений и преобразующих их в неуправляемые исключения Spring -->
+    <bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor"/>
     <!-- JNDI -->
     <!--    <jee:jndi-lookup id="dataSource" jndi-name="/jdbs/SpitterDS" resource-ref="true"/>-->
 
