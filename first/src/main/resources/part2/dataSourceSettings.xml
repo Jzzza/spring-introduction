@@ -21,6 +21,13 @@
         <property name="jpaVendorAdapter" ref="jpaVendorAdapter" />
     </bean>
 
+    <bean id="jpaVendorAdapter" class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+        <property name="database" value="HSQL"/>
+        <property name="showSql" value="true"/>
+        <property name="generatedDdl" value="false"/>
+        <property name="databasePlatform" value="org.hibernate.dialect.HSQLDialect" />
+    </bean>
+
     <!-- Перехватчик всех специфичных исключений и преобразующих их в неуправляемые исключения Spring -->
     <bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor"/>
     <!-- JNDI -->
