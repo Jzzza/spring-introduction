@@ -1,0 +1,12 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" vesion="1.0">
+    <persistence-unit name="spitterPU">
+        <class>com.habuma.spitter.domain.Spitter</class>
+        <class>com.habuma.spitter.domain.Spittle</class>
+        <properties>
+            <property name="toplink.jdbc.driver" value="org.hsq;db.jdbcDriver"/>
+            <property name="toplink.jdbc.url" value="jdbc:hsqldb:hsql://localhost/spitter/spitter"/>
+            <property name="toplink.jdbc.user" value="sa"/>
+            <property name="toplink.jdbc.password" value=""/>
+        </properties>
+    </persistence-unit>
+</persistence>
