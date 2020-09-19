@@ -8,11 +8,18 @@
     <context:component-scan base-package="com.habuma.spitter.persistence"/>
 
     <!--  Настройка механизма JPA управляемого приложением  -->
-    <bean id="emf" class="org.springframework.orm.jpa.LocalEntityManagerFactoryBean">
+
+    <!--<bean id="emf" class="org.springframework.orm.jpa.LocalEntityManagerFactoryBean">
         <property name="persistenceUnitName" value="spitterPU"/>
+    </bean>-->
+
+    <!-- Настройка механизма JPA управляемого контейнером -->
+
+    <bean id="emf" class="org.springframework.orm.jpa.LocalEntityManagerFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <!-- Настройка особенностей конкретной реализации JPA -->
+        <property name="jpaVendorAdapter" ref="jpaVendorAdapter" />
     </bean>
-
-
 
     <!-- Перехватчик всех специфичных исключений и преобразующих их в неуправляемые исключения Spring -->
     <bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor"/>
