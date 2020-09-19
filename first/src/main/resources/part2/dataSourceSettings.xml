@@ -33,6 +33,9 @@
 
     <jee:jndi-lookup id="emf" jndi-name="persistence/spitterPU"/>
 
+    <!-- Для обеспечения внелрения в EntityManager -->
+    <bean class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor"
+
     <!-- Перехватчик всех специфичных исключений и преобразующих их в неуправляемые исключения Spring -->
     <bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor"/>
     <!-- JNDI -->
