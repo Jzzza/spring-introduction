@@ -2,6 +2,7 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:jee="http://www.springframework.org/schema/jee"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/context"
 >
@@ -27,6 +28,10 @@
         <property name="generatedDdl" value="false"/>
         <property name="databasePlatform" value="org.hibernate.dialect.HSQLDialect" />
     </bean>
+
+    <!-- Получение EntityManagerFactory из JNDI -->
+
+    <jee:jndi-lookup id="emf" jndi-name="persistence/spitterPU"/>
 
     <!-- Перехватчик всех специфичных исключений и преобразующих их в неуправляемые исключения Spring -->
     <bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor"/>
