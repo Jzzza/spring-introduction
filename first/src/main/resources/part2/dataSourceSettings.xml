@@ -18,7 +18,8 @@
         <!-- Определяет методы, которые должны кешироватся -->
         <ehcache:caching cacheName="rantzCache" methodName="getRantsForDay"/>
         <!-- Кеширование методов по маске -->
-        <ehcache:caching cacheName="rantzCahce" methodName="get*"/>
+        <ehcache:caching cacheName="" methodName="get*"/>
+        <ehcache:flushing cacheNames="rantzCahce" methodName="saveRant"/>
     </ehcache:proxy>
 
     <!--  Настройка механизма JPA управляемого приложением  -->
