@@ -25,6 +25,9 @@
         <ehcache:flushing cacheNames="rantzCahce" methodName="saveRant" when="before"/>
     </ehcache:proxy>
 
+    <ehcache:annotations>
+        <ehcache:caching cacheName="rantzCache" id="rantzCacheModel"/>
+    </ehcache:annotations>
     <!--  Настройка механизма JPA управляемого приложением  -->
 
     <!--<bean id="emf" class="org.springframework.orm.jpa.LocalEntityManagerFactoryBean">
