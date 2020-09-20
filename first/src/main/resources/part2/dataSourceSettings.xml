@@ -14,7 +14,10 @@
 
     <ehcache:config configLocation="classpath:ehcache.xml"/>
 
-    <ehcache:proxy id="rantDao" refId="ramtDaoTarget">
+    <ehcache:proxy id="rantDao" refId="rantDaoTarget">
+        <bean class="com.roadrantz.dao.HibernateRantDao">
+            <property name="sessionFactory"/>
+        </bean>
         <!-- Определяет методы, которые должны кешироватся -->
         <ehcache:caching cacheName="rantzCache" methodName="getRantsForDay"/>
         <!-- Кеширование методов по маске -->
