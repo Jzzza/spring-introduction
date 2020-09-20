@@ -14,6 +14,13 @@
 
     <ehcache:config configLocation="classpath:ehcache.xml"/>
 
+    <ehcache:proxy id="rantDao" refId="ramtDaoTarget">
+        <!-- Определяет методы, которые должны кешироватся -->
+        <ehcache:caching cacheName="rantzCache" methodName="getRantsForDay"/>
+        <!-- Кеширование методов по маске -->
+        <ehcache:caching cacheName="rantzCahce" methodName="get*"/>
+    </ehcache:proxy>
+
     <!--  Настройка механизма JPA управляемого приложением  -->
 
     <!--<bean id="emf" class="org.springframework.orm.jpa.LocalEntityManagerFactoryBean">
