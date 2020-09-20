@@ -27,7 +27,7 @@
 
     <ehcache:annotations>
         <ehcache:caching cacheName="rantzCache" id="rantzCacheModel"/>
-        <ehcache:flushing cacheNames="rantzCahce" id="rantzCacheModel"/>
+        <ehcache:flushing cacheNames="rantzCahce" id="rantzCacheModel" when="before"/>
     </ehcache:annotations>
     <!--  Настройка механизма JPA управляемого приложением  -->
 
