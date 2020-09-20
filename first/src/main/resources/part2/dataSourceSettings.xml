@@ -12,6 +12,8 @@
 >
     <context:component-scan base-package="com.habuma.spitter.persistence"/>
 
+    <ehcache:config configLocation="classpath:ehcache.xml"/>
+
     <!--  Настройка механизма JPA управляемого приложением  -->
 
     <!--<bean id="emf" class="org.springframework.orm.jpa.LocalEntityManagerFactoryBean">
