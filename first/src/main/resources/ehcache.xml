@@ -1,0 +1,12 @@
+<ehcache>
+    <defaultCache
+        maxElementsInMemory="500"
+        overflowToDisk="false"
+        memoryStoreEvictionPolicy="LFU"
+        eternal="true"/>    <!-- Настройка кеша по умолчанию-->
+    <cache name="rantzCache"
+       maxElementsInMemory="500"
+       overflowToDisk="false"
+       memoryStoreEvictionPolicy="LFU"
+       eternal="true"/><!-- Настрйоки кеша rantzCache -->
+</ehcache>
