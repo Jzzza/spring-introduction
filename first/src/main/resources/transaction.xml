@@ -17,4 +17,8 @@
     <bean id="transactionManager2" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
+
+    <bean id="transactionManager3" class="org.springframework.orm.jpa.JpaTransactionManager">
+        <property name="entityManagerFactory" value="entityManagerFactory"/>
+    </bean>
 </beans>
