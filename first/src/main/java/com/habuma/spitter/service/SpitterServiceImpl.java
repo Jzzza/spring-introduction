@@ -9,6 +9,7 @@ public class SpitterServiceImpl {
     JpaSpitterDao spitterDao;
 
     public void saveSpitter(final Spitter spitter) {
+        // Чтобы исользовать класс TransactionTemplate нужно реализовать TransactionCallback
         txTemplate.execute(new TransactionCallback<Void>(){
             public Void doInTransaction(TransactionStatus transactionStatus) {
                 try {
