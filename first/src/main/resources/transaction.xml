@@ -29,4 +29,12 @@
     <bean id="transactionManager4" class="org.springframework.transaction.jta.JtaTransactionManager">
         <property name="transactionManagerName" value="java:/TransactionManager"/>
     </bean>
+
+    <bean id="spitterService" class="com.habuma.spitter.service.SpitterServiceImpl">
+        <property name="transactionTemplate">
+            <bean class="org.springframework.transaction.support.TransactionTemplate">
+                <property name="transactionManager" ref="transactionManager3"/>
+            </bean>
+        </property>
+    </bean>
 </beans>
