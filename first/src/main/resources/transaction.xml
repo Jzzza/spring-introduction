@@ -21,4 +21,6 @@
     <bean id="transactionManager3" class="org.springframework.orm.jpa.JpaTransactionManager">
         <property name="entityManagerFactory" value="entityManagerFactory"/>
     </bean>
+
+    <bean id="jpaDialect" class="org.springframework.orm.jpa.DefaultJpaDialect"/>
 </beans>
