@@ -59,5 +59,6 @@
     </aop:config>
 
     <!-- Включение объявления транзакций через аннотации -->
+    <!-- Говорит фреймворку проверить все компоненты в контексте отмеченные аннотацией Transactional -->
     <tx:annotation-driven transaction-manager="transactionManager3"/>
 </beans>
