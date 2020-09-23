@@ -57,4 +57,7 @@
     <aop:config>
         <aop:advisor advice-ref="txAdvice" pointcut="execution(* *..SpitterService.*(..))"/>
     </aop:config>
+
+    <!-- Включение объявления транзакций через аннотации -->
+    <tx:annotation-driven/>
 </beans>
