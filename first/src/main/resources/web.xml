@@ -4,4 +4,8 @@
         org.springframework.web.servlet.DispatcherServlet
     </servlet-class>
     <load-on-startu>1</load-on-startu>
+    <serlet-mapping>
+        <servlet-name>spitter</servlet-name>
+        <url-pattern>/</url-pattern>
+    </serlet-mapping>
 </servlet>
