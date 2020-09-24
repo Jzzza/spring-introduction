@@ -1,0 +1,7 @@
+<servlet>
+    <servlet-name>spitter</servlet-name>
+    <servlet-class>
+        org.springframework.web.servlet.DispatcherServlet
+    </servlet-class>
+    <load-on-startu>1</load-on-startu>
+</servlet>
