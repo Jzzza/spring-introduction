@@ -25,6 +25,11 @@
             <version>3.2.18.RELEASE</version>
         </dependency>
         <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>3.2.18.RELEASE</version>
+        </dependency>
+        <dependency>
             <groupId>org.springmodules</groupId>
             <artifactId>spring-modules-cache</artifactId>
             <version>0.8</version>
