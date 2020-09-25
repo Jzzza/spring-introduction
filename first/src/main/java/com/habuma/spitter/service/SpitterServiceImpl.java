@@ -9,7 +9,7 @@ import org.springframework.transaction.support.TransactionCallback;
 import org.springframework.transaction.support.TransactionTemplate;
 
 @Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
-public class SpitterServiceImpl {
+public class SpitterServiceImpl implements SpitterService {
     JpaSpitterDao spitterDao;
     TransactionTemplate txTemplate;
     TransactionStatus txStatus;
@@ -29,5 +29,9 @@ public class SpitterServiceImpl {
             }
         });
         spitterDao.saveSpitter(spitter);
+    }
+
+    public Object getRecentSpittles(int count) {
+        return null;
     }
 }
