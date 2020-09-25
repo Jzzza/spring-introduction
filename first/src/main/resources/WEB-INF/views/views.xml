@@ -18,4 +18,14 @@
             org.springframework.web.context.ContextLoaderListener
         </listener-class>
     </listener>
+
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <para-value>
+            /WEB-INF/spitter-security.xml
+            classpath:service-context.xml
+            classpath:persistence-context.xml
+            classpath:dataSource-context.xml
+        </para-value>
+    </context-param>
 </tiles-definitions>
