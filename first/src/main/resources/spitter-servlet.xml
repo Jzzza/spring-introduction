@@ -6,6 +6,8 @@
             http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
             http://www.springframework.org/schema/beans
             http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    <!--  Настройка, которая позволяет использовать аннотации в Spring MVC  -->
+    <mvc:annotation-driven/>
     <!-- Обработка запросов на получение статических ресурсов -->
     <mvc:resources mapping="/resources/**" location="/resources/"/>
 </beans>
