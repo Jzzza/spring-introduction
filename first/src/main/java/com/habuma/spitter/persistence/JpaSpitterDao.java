@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-@Repository("spitterDao")                                           // Использование контекстных сеансов в hibernate
+// @Repository("spitterDao")                                           // Использование контекстных сеансов в hibernate
 @Transactional                                                      // Выполнение методово проиходит в контексте транзакции
 public class JpaSpitterDao implements SpitterDAO {
     private static final String RECENT_SPITTLES = "SELECT s from Spittle s";
