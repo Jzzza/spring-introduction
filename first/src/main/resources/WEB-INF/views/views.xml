@@ -28,4 +28,8 @@
             classpath:dataSource-context.xml
         </para-value>
     </context-param>
+
+    <definition name="spittles/list" extends="template">
+        <put-attribute name="content" value="/WEB-INF/views/spittles/list.jsp"/>
+    </definition>
 </tiles-definitions>
