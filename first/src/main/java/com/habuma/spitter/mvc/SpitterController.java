@@ -2,6 +2,7 @@ package com.habuma.spitter.mvc;
 
 import com.habuma.spitter.domain.Spitter;
 import com.habuma.spitter.service.SpitterService;
+import org.apache.commons.io.FileUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -13,11 +14,14 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.inject.Inject;
 import javax.validation.Valid;
+import java.io.File;
+import java.io.IOException;
 
 @Controller
 @RequestMapping("/spitter") // Корневой урл
 public class SpitterController {
     private final SpitterService spitterService;
+    private String webRootPath="";
 
     @Inject
     public SpitterController(SpitterService spitterService) {
@@ -60,12 +64,18 @@ public class SpitterController {
         return "redirect:/spitters/" + spitter.getUsername();
     }
 
-    private void saveImage(String s, MultipartFile image) {
+    private void saveImage(String filename, MultipartFile image) throws ImageUploadException{
+        try{
+            File file = new File(webRootPath + "/resources/" + filename);
+            FileUtils.writeByteArrayToFile(file, image.getBytes());
+        } catch (IOException e) {
+            throw new ImageUploadException("Unable to save image", e);
+        }
     }
 
-    private void validateImage(MultipartFile image) {
+    private void validateImage(MultipartFile image) throws ImageUploadException {
         if (!image.getContentType().equals("image/jpg")) {
-            throw new ImageUploadException("Only JPG images accepted");
+            throw new ImageUploadException("Only JPG images accepted", e);
         }
     }
 
