@@ -75,7 +75,7 @@ public class SpitterController {
 
     private void validateImage(MultipartFile image) throws ImageUploadException {
         if (!image.getContentType().equals("image/jpg")) {
-            throw new ImageUploadException("Only JPG images accepted", e);
+            throw new ImageUploadException("Only JPG images accepted");
         }
     }
 
