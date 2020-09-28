@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.inject.Inject;
 import javax.validation.Valid;
@@ -39,13 +40,30 @@ public class SpitterController {
 
     @RequestMapping(method = RequestMethod.POST)
     public String addSpitterFromForm(@Valid Spitter spitter,
-                                     BindingResult bindingResult) {
+                                     BindingResult bindingResult,
+                                     @RequestParam(value="image", required = false) MultipartFile image) { // Прием файла
         if (bindingResult.hasErrors()) {
             return "spitter/edit";
         }
         spitterService.saveSpitter(spitter);
+
+        try {
+            if (!image.isEmpty()) {
+                validateImage(image);
+
+                saveImage(spitter.getId() + ".jpg", image);
+            }
+        } catch (ImageUploadException e) {
+            bindingResult.reject(e.getMessage());
+        }
         // Переадресовать после запроса POST
         return "redirect:/spitters/" + spitter.getUsername();
+    }
+
+    private void saveImage(String s, MultipartFile image) {
+    }
+
+    private void validateImage(MultipartFile image) {
     }
 
     @RequestMapping(value = "/{username}", method = RequestMethod.GET)
