@@ -64,6 +64,9 @@ public class SpitterController {
     }
 
     private void validateImage(MultipartFile image) {
+        if (!image.getContentType().equals("image/jpg")) {
+            throw new ImageUploadException("Only JPG images accepted");
+        }
     }
 
     @RequestMapping(value = "/{username}", method = RequestMethod.GET)
