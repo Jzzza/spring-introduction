@@ -61,5 +61,11 @@
         <property name="numberToolAttribute">
             <value>numberTool</value>
         </property>
+        <property name="exposeRequestAttributes">
+            <value>true</value>
+        </property>
+        <property name="exposeSessionAttributes">
+            <value>true</value>
+        </property>
     </bean>
 </beans>
