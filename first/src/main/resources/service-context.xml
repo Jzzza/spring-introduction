@@ -70,4 +70,9 @@
         <!-- Включаем использование макроопределений в представлениях -->
         <property name="exposeSpringMacroHelpers" value="true"/>
     </bean>
+
+    <!--  FreeMarker  -->
+    <bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+        <property name="templateLoaderPath" value="WEB-INF/freemarker/"/>
+    </bean>
 </beans>
