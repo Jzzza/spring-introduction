@@ -81,4 +81,8 @@
             </props>
         </property>
     </bean>
+
+    <bean id="viewResolverFreeMarker" class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+        <property name="suffix" value=".ftl"/>
+    </bean>
 </beans>
