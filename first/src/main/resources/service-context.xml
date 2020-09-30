@@ -90,5 +90,6 @@
         <property name="exposerSessionAttributes">
             <value>true</value>
         </property>
+        <property name="exposeSpringMacroHelpers" value="true" />
     </bean>
 </beans>
