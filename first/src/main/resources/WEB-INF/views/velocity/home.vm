@@ -10,7 +10,9 @@
         #foreach(#rant in #rants)
         <li>${rant.vehicle.state}/
             ${rant.vehicle.plateNumber} --
-            ${rant.rantText}</li>
+            ${rant.rantText}
+            ${dateToll.format("FULL", rant.postedDate)}
+            </li>
         #end
         </ul>
     </body>
