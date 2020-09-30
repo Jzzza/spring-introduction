@@ -10,7 +10,7 @@
         #foreach(#rant in #rants)
         <li>${rant.vehicle.state}/
             ${rant.vehicle.plateNumber} --
-            ${rant.rantText</li>
+            ${rant.rantText}</li>
         #end
         </ul>
     </body>

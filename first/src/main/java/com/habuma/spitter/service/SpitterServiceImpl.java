@@ -34,4 +34,12 @@ public class SpitterServiceImpl implements SpitterService {
     public Object getRecentSpittles(int count) {
         return null;
     }
+
+    public Spitter getSpitter(String username) {
+        return null;
+    }
+
+    public Object getSpittlesForSpitter(String username) {
+        return null;
+    }
 }
