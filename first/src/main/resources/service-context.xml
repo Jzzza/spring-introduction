@@ -67,5 +67,7 @@
         <property name="exposeSessionAttributes">
             <value>true</value>
         </property>
+        <!-- Включаем использование макроопределений в представлениях -->
+        <property name="exposeSpringMacroHelpers" value="true"/>
     </bean>
 </beans>
