@@ -84,5 +84,11 @@
 
     <bean id="viewResolverFreeMarker" class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
         <property name="suffix" value=".ftl"/>
+        <property name="exposeRequestAttributes">
+            <value>true</value>
+        </property>
+        <property name="exposerSessionAttributes">
+            <value>true</value>
+        </property>
     </bean>
 </beans>
