@@ -74,5 +74,11 @@
     <!--  FreeMarker  -->
     <bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
         <property name="templateLoaderPath" value="WEB-INF/freemarker/"/>
+        <property name="freemarkerSettings">
+            <props>
+                <!-- Задаем проверку изменений в шаблонах -->
+                <prop key="template_update_delay">3600</prop>
+            </props>
+        </property>
     </bean>
 </beans>
