@@ -37,4 +37,8 @@
     <definition name="spittles/edit" extends="template">
         <put-attribute name="content" value="/WEB-INF/views/spittles/edit.jsp"/>
     </definition>
+
+    <prop key="/rantsForVehicle.xls">
+        rantsVehicleController
+    </prop>
 </tiles-definitions>
