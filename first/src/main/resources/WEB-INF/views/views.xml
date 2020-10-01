@@ -50,4 +50,9 @@
     <prop key="/rantsForVehicle.pdf">
         rantsVehicleController
     </prop>
+
+    <servlet-mapping>
+        <servlet-name>roadrantz</servlet-name>
+        <url-pattern>*.pdf</url-pattern>
+    </servlet-mapping>
 </tiles-definitions>
