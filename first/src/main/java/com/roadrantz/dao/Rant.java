@@ -6,7 +6,6 @@ public class Rant {
     }
 
     public boolean getRantText() {
-
-
+        return false;
     }
 }
