@@ -92,4 +92,7 @@
         </property>
         <property name="exposeSpringMacroHelpers" value="true" />
     </bean>
+
+    <!--  Bean for working with Excel  -->
+    <bean id="vehicleRants.xls" class="com.roadrantz.mvc.RantExcelView"/>
 </beans>
