@@ -95,4 +95,6 @@
 
     <!--  Bean for working with Excel  -->
     <bean id="vehicleRants.xls" class="com.roadrantz.mvc.RantExcelView"/>
+
+    <bean id="vehicleRants.pdf" class="com.roadrantz.mvc.RantPdfView"/>
 </beans>
