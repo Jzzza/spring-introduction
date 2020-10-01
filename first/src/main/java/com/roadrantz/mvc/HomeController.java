@@ -1,5 +1,6 @@
-package com.roadrantz.dao;
+package com.roadrantz.mvc;
 
+import com.roadrantz.dao.Rant;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
