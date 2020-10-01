@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Controller
-public class RantsVehicleController {
+public class RantsForVehicleController {
     private static final String BASE_BIEW_NAME = "vehicleRants";
 
     private String getViewName(HttpServletRequest request) {

@@ -46,4 +46,8 @@
         <servlet-name>roadrantz</servlet-name>
         <url-pattern>*.xls</url-pattern>
     </servlet-mapping>
+
+    <prop key="/rantsForVehicle.pdf">
+        rantsVehicleController
+    </prop>
 </tiles-definitions>
