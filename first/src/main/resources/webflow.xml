@@ -12,6 +12,7 @@
 
     <bean class="org.springframework.webflow.mvc.servlet.FlowHandlerAdapter">
         <property name="flowRegistry" ref="flowRegistry"/>
+        <property name="flowExecutor" ref="flowExecutor"/>
     </bean>
 
 
