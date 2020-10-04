@@ -12,5 +12,10 @@
         <input name="order" value="order"/>
         <transition on="orderCreated" to="payment"/>
     </subflow-state>
+    <action-state id="completeOrder">
+        <transition on-exception="com.springinaction.pizza.service.CustomerNotFoundException" to="registrationForm"/>
+    </action-state>
+    <action-state id="registrationForm"/>
     <end-state id="customerReady" />
+    <end-state id="customerNotReady" />
 </view-state>
