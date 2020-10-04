@@ -1,6 +1,7 @@
 <view-state id="takePayment" model="flowScope.paymentDetails">
     <var name="customer" class="com.springinaction.pizza.domain.Customer"/>
     <evaluate result="viewScope.toppingsList" expression="T(com.springinaction.pizza.domain.Topping).asList()"/>
+    <set name="flowScope.pizza" value="new com.springinaction.pizza.domain.Pizza()"/>
     <action-state id="saveOrder">
         <evalutate expression="pizzaFlowActions.saveOrder(order)"/>
         <transition to="thankYou"/>
