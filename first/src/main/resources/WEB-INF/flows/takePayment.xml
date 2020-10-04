@@ -12,4 +12,5 @@
         <input name="order" value="order"/>
         <transition on="orderCreated" to="payment"/>
     </subflow-state>
+    <end-state id="customerReady" />
 </view-state>
