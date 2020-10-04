@@ -1,0 +1,1 @@
+<view-state id="takePayment" model="flowScope.paymentDetails"/>
