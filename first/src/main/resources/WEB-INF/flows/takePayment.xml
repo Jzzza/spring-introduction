@@ -3,4 +3,9 @@
         <evalutate expression="pizzaFlowActions.saveOrder(order)"/>
         <transition to="thankYou"/>
     </action-state>
+    <decision-state id="checkDeliveryArea">
+        <if test="pizzaFlowActions.checkDeliberyArea(customer.zipCode)"
+            then="addCustomer"
+            else="deliveryWarning"/>
+    </decision-state>
 </view-state>
