@@ -8,4 +8,8 @@
             then="addCustomer"
             else="deliveryWarning"/>
     </decision-state>
+    <subflow-state id="order" subflow="pizza/order">
+        <input name="order" value="order"/>
+        <transition on="orderCreated" to="payment"/>
+    </subflow-state>
 </view-state>
