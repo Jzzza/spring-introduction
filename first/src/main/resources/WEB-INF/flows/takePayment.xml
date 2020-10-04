@@ -1,1 +1,6 @@
-<view-state id="takePayment" model="flowScope.paymentDetails"/>
+<view-state id="takePayment" model="flowScope.paymentDetails">
+    <action-state id="saveOrder">
+        <evalutate expression="pizzaFlowActions.saveOrder(order)"/>
+        <transition to="thankYou"/>
+    </action-state>
+</view-state>
