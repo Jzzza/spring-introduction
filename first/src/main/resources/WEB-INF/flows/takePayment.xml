@@ -16,6 +16,9 @@
         <transition on-exception="com.springinaction.pizza.service.CustomerNotFoundException" to="registrationForm"/>
     </action-state>
     <action-state id="registrationForm"/>
-    <end-state id="customerReady" />
-    <end-state id="customerNotReady" />
+    <end-state id="customerReady"/>
+    <end-state id="customerNotReady"/>
+    <global-transitions>
+        <transition on="cancel" to="endState"/>
+    </global-transitions>
 </view-state>
