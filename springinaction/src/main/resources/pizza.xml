@@ -2,8 +2,9 @@
 <flow xmlns="http://www.springframework.org/schema/webflow"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.springframework.org/schema/webflow
-        http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
-    <var name="order" class="com.springinaction.pizza.domain.Order">
+        http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd"
+        start-state="identifyCustomer">
+    <var name="order" class="com.springinaction.pizza.domain.Order"/>
 
     <!-- Вызов последовательности идентификации клиента -->
     <subflow-state id="identifyCustomer" subflow="pizza/cusomter">
