@@ -7,6 +7,7 @@
 
     <!-- Вывод приветствия -->
     <view-state id="welcome">
+        <secured attributes="ROLE_ADMIN" match="all"/>
         <transition on="phoneEntered" to="lookupCustomer"/>
     </view-state>
 
