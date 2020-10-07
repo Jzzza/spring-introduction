@@ -1,0 +1,17 @@
+<application>
+    <navigation-handler>
+        org.springframework.webflow.executor.jsf.FlowNavigationHandler
+    </navigation-handler>
+    <property-resolver>
+        org.springframework.webflow.executor.jsf.FlowPropertyResolver
+    </property-resolver>
+    <variable-resolver>
+        org.springframework.webflow.executor.jsf.FlowVariableResolver
+    </variable-resolver>
+    <variable-resolver>
+        org.springframework.web.jsf.DelegatingVariableResolver
+    </variable-resolver>
+    <variable-resolver>
+        org.springframework.web.jsf.WebApplicationContextVariableResolver
+    </variable-resolver>
+</application>
