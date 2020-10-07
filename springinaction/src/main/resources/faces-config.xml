@@ -14,4 +14,9 @@
     <variable-resolver>
         org.springframework.web.jsf.WebApplicationContextVariableResolver
     </variable-resolver>
+    <lifecycly>
+        <phase-listener>
+            org.springframework.webflow.executor.jsf.FlowPhaseListener
+        </phase-listener>
+    </lifecycly>
 </application>
