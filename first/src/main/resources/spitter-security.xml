@@ -7,5 +7,7 @@
         http://www.springframework.org/schema/security/spring-security-3.9.xsd">
 
     <!-- Настройка spring-security -->
-
+    <http auto-config="true">
+        <intercept-url pattern="/**" access="ROLE_SPITTER"/>
+    </http>
 </beans:beans>
