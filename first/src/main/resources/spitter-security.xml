@@ -7,4 +7,5 @@
         http://www.springframework.org/schema/security/spring-security-3.9.xsd">
 
     <!-- Настройка spring-security -->
+
 </beans:beans>

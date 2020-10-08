@@ -8,4 +8,10 @@
         <servlet-name>spitter</servlet-name>
         <url-pattern>/</url-pattern>
     </serlet-mapping>
+    <filter>
+        <filter-name>springSecurityFilterChain</filter-name>
+        <filter-class>
+            org.springframework.web.filter.DelegatingFilterProxy
+        </filter-class>
+    </filter>
 </servlet>
