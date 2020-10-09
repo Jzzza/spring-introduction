@@ -12,7 +12,7 @@
             login-page="/login"
             authentication-failure-url="/login?login_error=t"/>
         <http-basic/>
-        <logout/>
+        <logout logout-url="/static/j_spring_security_logout"/>
         <intercept-url pattern="/**" access="ROLE_SPITTER"/>
     </http>
 
