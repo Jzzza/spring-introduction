@@ -1,20 +1,44 @@
-<html>
-    <head><title>Login page</title></head>
-    <body onload='document.f.j_username.focus();'>
-        <h3>Login with Username and Password</h3.
-        <form name='f' method='POST'
-                action='/Spitter/j_spring_security_check'>
-            <table>
-                <tr><td>User:</td><td>
-                    <input type='text' name='j_username' value=''>
-                </td></tr>
-                <tr><td colspan='2'>
-                    <input name='submit' type='submit'/>
-                </td></tr>
-                <tr><td colspan='2'>
-                    <input name='reset' type='reset' />
-                </td></tr>
-            </table>
-        </form>
-    </body>
-</html>
+<%@ taglib prefix="s" uri="http://www.springframework.org/tags"%>
+<div>
+    <h2>Sign in to Spitter</h2>
+
+    <p>
+        If you`ve been using Spitter from your phone.
+        then that`s amazing...we dont`t support IM yet.
+    </p>
+
+    <!-- Путь к фильтру аутентификации -->
+    <spring:url var="authUrl" value="/static/j_spring_security_check" />
+    <form method="post" class="signin" action="${authUrl}">
+        <fieldset>
+        <table cellspacing="0">
+        <tr>
+        <th><label for="username_or_email">Username or Email</label></th>
+            <td><input id="username_or_email"
+                        name="j_username"
+                        type="text" /> <!-- Поле ввода имени пользователя -->
+            </td>
+        </tr>
+        <tr>
+            <th><label for="password">Password</label></th>
+            <td><input id="password"
+                        name="j_password"
+                        type="password" /> <!-- Поле ввода пароля -->
+            <small><a href="/account/resend_password">Forgot?</a></small>
+            </td>
+        </tr>
+        <tr>
+            <th></th>
+            <td><input id="remember_me"
+                        name="_spring_security_remember_me"
+                        type="checkbox" /> <!-- Флажок "запомнить меня" -->
+            <label for="remember_me"
+                    class="inline">Remember me</label></td>
+        </tr>
+        </table>
+        </fieldset>
+    </from>
+    <script type="text/javascript">
+        document.getElementById('username_or_emai').focus();
+    </script>
+</div>
