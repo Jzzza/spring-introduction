@@ -15,7 +15,8 @@
         <logout logout-url="/static/j_spring_security_logout"/>
         <intercept-url pattern="/**" access="ROLE_SPITTER"/>
         <intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMIN') and hasIpAddress('192.168.1.2')"/>
-        <intercept-url pattern="WEB-INF\views\authenticationForm.jsp" requires-channel="https"/>
+        <intercept-url pattern="/spitter/form" requires-channel="https"/>
+        <intercept-url pattern="/home" requires-channel="http"/>
     </http>
 
 </beans:beans>
