@@ -8,7 +8,9 @@
 
     <!-- Настройка spring-security -->
     <http auto-config="true">
-        <form-login/>
+        <form-login login-processing-url="/static/j_spring_security_check"
+            login-page="/login"
+            authentication-failure-url="/login?login_error=t"/>
         <http-basic/>
         <logout/>
         <intercept-url pattern="/**" access="ROLE_SPITTER"/>
