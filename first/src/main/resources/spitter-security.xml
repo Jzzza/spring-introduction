@@ -35,7 +35,9 @@
                 user-search-base="ou=people"
                 user-search-filter="(uid={0})"
                 group-search-base="ou=groups"
-                group-search-filter="member={0}"/>
+                group-search-filter="member={0}">
+            <password-compare hash="md5" password-attribute="password"/>
+        </ldap-authentication-provider>
     </authentication-manager>
 
     <jdbc-user-service id="jdbcUserService" data-source-ref="dataSource"
