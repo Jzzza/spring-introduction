@@ -32,7 +32,9 @@
             </user-service>
         </authentication-provider>-->
         <ldap-authentication-provider
+                user-search-base="ou=people"
                 user-search-filter="(uid={0})"
+                group-search-base="ou=groups"
                 group-search-filter="member={0}"/>
     </authentication-manager>
 
