@@ -41,7 +41,7 @@
     </authentication-manager>
 
 <!--    <ldap-server url="ldap://habma.com:389/dc=habuma.dc=com"/>-->
-    <ldap-server root="dc=habuma,dc=com"/>
+    <ldap-server root="dc=habuma,dc=com" ldif="classpath:users.ldif"/>
 
     <jdbc-user-service id="jdbcUserService" data-source-ref="dataSource"
                        group-authorities-by-username-query="select username, password, true from spitter where username=?"
