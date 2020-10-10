@@ -32,4 +32,6 @@
             </user-service>
         </authentication-provider>
     </authentication-manager>
+
+    <jdbc-user-service id="jdbcUserService" data-source-ref="dataSource"/>
 </beans:beans>
