@@ -25,12 +25,15 @@
         <user name="admin" password="admin" authorities="ROLE_ADMIN"/>
     </user-service>
 
-    <authentication-manager>
-        <authentication-provider user-service-ref="userService">
+    <authentication-manager alias="authenticationManager">
+        <!--<authentication-provider user-service-ref="userService">
             <user-service id="userServiceTest">
                 <user name="test" password="test" authorities="ROLES_TEST"/>
             </user-service>
-        </authentication-provider>
+        </authentication-provider>-->
+        <ldap-authentication-provider
+                user-search-filter="(uid={0})"
+                group-search-filter="member={0}"/>
     </authentication-manager>
 
     <jdbc-user-service id="jdbcUserService" data-source-ref="dataSource"
