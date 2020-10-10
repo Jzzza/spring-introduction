@@ -40,6 +40,8 @@
         </ldap-authentication-provider>
     </authentication-manager>
 
+    <ldap-server url="ldap://habma.com:389/dc=habuma.dc=com"/>
+
     <jdbc-user-service id="jdbcUserService" data-source-ref="dataSource"
                        group-authorities-by-username-query="select username, password, true from spitter where username=?"
                        authorities-by-username-query="select username, 'ROLE_SPITTER' from spitter where username=?" />
