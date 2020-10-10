@@ -17,6 +17,7 @@
         <intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMIN') and hasIpAddress('192.168.1.2')"/>
         <intercept-url pattern="/spitter/form" requires-channel="https"/>
         <intercept-url pattern="/home" requires-channel="http"/>
+        <remember-me key="spitterKey" token-validity-seconds="2419200"/>
     </http>
 
     <user-service id="userService">
