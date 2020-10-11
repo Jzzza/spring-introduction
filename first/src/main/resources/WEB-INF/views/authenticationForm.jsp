@@ -33,7 +33,7 @@
                         name="_spring_security_remember_me"
                         type="checkbox" /> <!-- Флажок "запомнить меня" -->
             <label for="remember_me"
-                    class="inline">Remember me</label></td>
+                    class="inline">Remember me </label></td>
         </tr>
         </table>
         </fieldset>
