@@ -49,4 +49,5 @@
                        authorities-by-username-query="select username, 'ROLE_SPITTER' from spitter where username=?" />
 
     <global-method-security secured-annotations="enabled"/>
+<!--    <global-method-security jsr250-annotations="enabled"/>-->
 </beans:beans>
