@@ -14,6 +14,7 @@ import org.jets3t.service.model.S3Object;
 import org.jets3t.service.security.AWSCredentials;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.security.access.prepost.PostAuthorize;
+import org.springframework.security.access.prepost.PostFilter;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -116,6 +117,7 @@ public class SpitterController {
     }
 
     @PreAuthorize("hasRole('ROLES_SPITTER') and #spittle.text.length() <=140 or hasRole('ROLE_PREMIUM')")
+    @PostFilter("filterObject.spitter.username == principal.name")
     @RequestMapping(value = "/{username}", method = RequestMethod.GET)
     public String showSpitterProfile(@PathVariable String username,
                                      Model model) {
