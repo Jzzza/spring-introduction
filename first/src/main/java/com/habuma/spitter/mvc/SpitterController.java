@@ -13,6 +13,7 @@ import org.jets3t.service.model.S3Bucket;
 import org.jets3t.service.model.S3Object;
 import org.jets3t.service.security.AWSCredentials;
 import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -56,7 +57,7 @@ public class SpitterController {
         return "spitters/edit";
     }
 
-    @Secured({"ROLE_SPITTER","ROLE_ADMIN"}) // Можно заменить на стандартную аннотацию RolesAllowedk
+    @Secured({"ROLE_SPITTER","ROLE_ADMIN"}) // Можно заменить на стандартную аннотацию RolesAllowed
     @RequestMapping(method = RequestMethod.POST)
     public String addSpitterFromForm(@Valid Spitter spitter,
                                      BindingResult bindingResult,
@@ -112,6 +113,7 @@ public class SpitterController {
         }
     }
 
+    @PreAuthorize("hasRole('ROLES_SPITTER')")
     @RequestMapping(value = "/{username}", method = RequestMethod.GET)
     public String showSpitterProfile(@PathVariable String username,
                                      Model model) {
