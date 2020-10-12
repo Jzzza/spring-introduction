@@ -58,5 +58,6 @@
 
     <global-method-security secured-annotations="enabled" pre-post-annotations="enabled">
         <expression-handler ref="expressionHandler"/>
+        <protect-pointcut expression="execution(@com.habuma.spitter.Sensitive * *.*(String))" access="ROLES_SPITTER"/>
     </global-method-security>
 </beans:beans>
