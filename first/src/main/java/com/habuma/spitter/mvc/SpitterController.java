@@ -12,6 +12,7 @@ import org.jets3t.service.impl.rest.httpclient.RestS3Service;
 import org.jets3t.service.model.S3Bucket;
 import org.jets3t.service.model.S3Object;
 import org.jets3t.service.security.AWSCredentials;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -48,6 +49,7 @@ public class SpitterController {
         return "spittles/list";
     }
 
+    @Secured("ROLE_SPITTER")
     @RequestMapping(method = RequestMethod.GET, params = "new")
     public String createSpitterProfile(Model model) {
         model.addAttribute(new Spitter());
