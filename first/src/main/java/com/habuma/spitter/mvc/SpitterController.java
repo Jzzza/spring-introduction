@@ -56,6 +56,7 @@ public class SpitterController {
         return "spitters/edit";
     }
 
+    @Secured({"ROLE_SPITTER","ROLE_ADMIN"}) // Можно заменить на стандартную аннотацию RolesAllowedk
     @RequestMapping(method = RequestMethod.POST)
     public String addSpitterFromForm(@Valid Spitter spitter,
                                      BindingResult bindingResult,
