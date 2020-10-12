@@ -7,6 +7,7 @@ public class Spittle {
     private String fullName;
     private String email;
     private boolean updatedByEmail;
+    private Spitter spitter;
 
 
     public String getUsername() {
@@ -50,5 +51,13 @@ public class Spittle {
 
     public long getId() {
         return id;
+    }
+
+    public Spitter getSpitter() {
+        return spitter;
+    }
+
+    public void setSpitter(Spitter spitter) {
+        this.spitter = spitter;
     }
 }
