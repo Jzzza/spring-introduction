@@ -41,13 +41,22 @@
         </ldap-authentication-provider>
     </authentication-manager>
 
-<!--    <ldap-server url="ldap://habma.com:389/dc=habuma.dc=com"/>-->
+    <!--    <ldap-server url="ldap://habma.com:389/dc=habuma.dc=com"/>-->
     <ldap-server root="dc=habuma,dc=com" ldif="classpath:users.ldif"/>
 
     <jdbc-user-service id="jdbcUserService" data-source-ref="dataSource"
                        group-authorities-by-username-query="select username, password, true from spitter where username=?"
-                       authorities-by-username-query="select username, 'ROLE_SPITTER' from spitter where username=?" />
+                       authorities-by-username-query="select username, 'ROLE_SPITTER' from spitter where username=?"/>
+    
+    <!--    <global-method-security jsr250-annotations="enabled"/>-->
+    <beans:bean id="expressionHandler"
+                class="org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler">
+        <beans:property name="permissionHandler">
+            <beans:bean class="com.habuma.spitter.secutriy.SpittlePermissionEvaluator"/>
+        </beans:property>
+    </beans:bean>
 
-    <global-method-security secured-annotations="enabled"/>
-<!--    <global-method-security jsr250-annotations="enabled"/>-->
+    <global-method-security secured-annotations="enabled" pre-post-annotations="enabled">
+        <expression-handler ref="expressionHandler"/>
+    </global-method-security>
 </beans:beans>
