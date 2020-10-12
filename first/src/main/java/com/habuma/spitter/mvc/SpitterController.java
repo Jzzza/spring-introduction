@@ -113,7 +113,7 @@ public class SpitterController {
         }
     }
 
-    @PreAuthorize("hasRole('ROLES_SPITTER')")
+    @PreAuthorize("hasRole('ROLES_SPITTER') and #spittle.text.length() <=140 or hasRole('ROLE_PREMIUM')")
     @RequestMapping(value = "/{username}", method = RequestMethod.GET)
     public String showSpitterProfile(@PathVariable String username,
                                      Model model) {
